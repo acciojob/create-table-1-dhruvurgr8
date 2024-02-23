@@ -19,7 +19,7 @@ function insert_Row() {
   rowNum++;
   colNum = 1;
 
-  table.appendChild(row);
+  table.insertBefore(row, table.firstChild);
 
   
   btn.removeEventListener("click", insert_Row);
