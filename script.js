@@ -1,31 +1,29 @@
-const btn = document.querySelector('.btn');
-const table = document.querySelector('#sampleTable');
+const btn = document.querySelector(".btn");
+const table = document.querySelector("#sampleTable");
 let rowNum = 3;
 
 function insert_Row() {
-    btn.addEventListener('click', (e) => {
-        let colNum = 1;
+  let colNum = 1;
 
-        const row = document.createElement('tr');
+  const row = document.createElement("tr");
 
-        
-        const col1 = document.createElement('td');
-        col1.textContent = `Row${rowNum} cell${colNum}`;
-        row.appendChild(col1);
-        colNum++;
+  const col1 = document.createElement("td");
+  col1.textContent = `Row${rowNum} cell${colNum}`;
+  row.appendChild(col1);
+  colNum++;
 
-        
-        const col2 = document.createElement('td');
-        col2.textContent = `Row${rowNum} cell${colNum}`;
-        row.appendChild(col2);
+  const col2 = document.createElement("td");
+  col2.textContent = `Row${rowNum} cell${colNum}`;
+  row.appendChild(col2);
 
-        
-        rowNum++;
+  rowNum++;
+  colNum = 1;
 
-        
-        table.appendChild(row);
-    });
+  table.appendChild(row);
+
+  
+  btn.removeEventListener("click", insert_Row);
 }
 
-// Call the function to set up the event listener
-insert_Row();
+
+btn.addEventListener("click", insert_Row);
