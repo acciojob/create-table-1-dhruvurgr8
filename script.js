@@ -8,12 +8,12 @@ function insert_Row() {
   const row = document.createElement("tr");
 
   const col1 = document.createElement("td");
-  col1.textContent = `Row${rowNum} cell${colNum}`;
+  col1.textContent = `New cell${colNum}`;
   row.appendChild(col1);
   colNum++;
 
   const col2 = document.createElement("td");
-  col2.textContent = `Row${rowNum} cell${colNum}`;
+  col2.textContent = `New cell${colNum}`;
   row.appendChild(col2);
 
   rowNum++;
